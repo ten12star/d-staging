@@ -4,6 +4,17 @@
   @param {boolean} [render_wrapper] - When true, wraps the drawer in the section wrapper that the Section Rendering API adds automatically.
 {% enddoc %}
 
+{% comment %}
+  Only renders when the cart type setting is 'drawer' and we are not already on the cart page.
+
+  Outputs the slide-out cart panel: a <theme-drawer>/<dialog> shell wrapping <cart-drawer-component>,
+  which loads cart-drawer.js and holds the drawer header (title plus item-count badge), the line items
+  via 'cart-products', and the sticky totals/checkout area via 'cart-summary'. An empty-state variant is
+  captured up front and reused both for the initial render and for the #empty-cart-template that the
+  component swaps in when the last line item is removed. Drawer-scoped CSS lives in the stylesheet
+  block at the bottom of this file.
+{% endcomment %}
+
 {%- liquid
   assign render_wrapper = render_wrapper | default: true, allow_false: true
 -%}
