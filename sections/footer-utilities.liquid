@@ -20,6 +20,7 @@
   >
     {% content_for 'blocks' %}
   </div>
+  <p class="footer-build-note">Agent test — build 1</p>
 </div>
 
 {% stylesheet %}
@@ -55,6 +56,13 @@
       text-align: left;
       justify-self: start;
     }
+  }
+
+  .footer-build-note {
+    margin-block-start: var(--gap);
+    font-size: 0.6875rem;
+    text-align: center;
+    color: var(--color-foreground-muted);
   }
 
   /* Dynamic positioning based on number of blocks */
