@@ -63,6 +63,8 @@
   {% endif %}
   {{- block.shopify_attributes -}}
 >
+  <span class="header-build-badge">Build 2 ✓</span>
+
   {% if shop.customer_accounts_enabled %}
     {% liquid
       assign account_actions_style = ''
@@ -216,6 +218,18 @@
     padding-block: var(--padding-sm);
     line-height: 1.2;
     min-height: var(--minimum-touch-target);
+  }
+
+  .header-build-badge {
+    align-self: center;
+    margin-inline-end: var(--gap-xs);
+    padding: 2px 6px;
+    border-radius: 999px;
+    background-color: rgb(0 0 0 / 6%);
+    color: var(--color-foreground-muted);
+    font-size: 0.6875rem;
+    line-height: 1.4;
+    white-space: nowrap;
   }
 
   header-actions {
