@@ -19,11 +19,25 @@
       , {{ powered_by_link }}
     {%- endif -%}
   </span>
+  <span class="footer-utilities__agent-badge">Verified by Agent ✓</span>
 </div>
 
 {% stylesheet %}
   .footer-utilities__group-copyright {
     color: var(--color-utilities, var(--color-foreground-muted));
+  }
+
+  .footer-utilities__agent-badge {
+    display: inline-block;
+    margin-inline-start: 0.5em;
+    padding: 0.15em 0.6em;
+    border-radius: 999px;
+    background-color: rgb(var(--color-rgb, var(--color-foreground-rgb)) / 0.08);
+    color: var(--color-utilities, var(--color-foreground-muted));
+    font-size: 0.9em;
+    line-height: 1.4;
+    white-space: nowrap;
+    vertical-align: baseline;
   }
 {% endstylesheet %}
 
