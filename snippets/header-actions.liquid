@@ -63,6 +63,8 @@
   {% endif %}
   {{- block.shopify_attributes -}}
 >
+  <span class="header-actions__badge">Demo Ready!</span>
+
   {% if shop.customer_accounts_enabled %}
     {% liquid
       assign account_actions_style = ''
@@ -312,6 +314,20 @@
     cart-icon.header-actions__cart-icon--text:has(.cart-bubble__text-count:empty) {
       --cart-bubble-right: 2.5px;
     }
+  }
+
+  .header-actions__badge {
+    align-self: center;
+    margin-inline-end: var(--gap-xs);
+    padding-block: calc(var(--padding-xs) / 2);
+    padding-inline: var(--padding-xs);
+    border-radius: var(--style-border-radius-badge, 999px);
+    background-color: color-mix(in srgb, currentcolor 8%, transparent);
+    color: currentcolor;
+    opacity: var(--opacity-subdued-text);
+    font-size: var(--font-size--2xs);
+    line-height: 1;
+    white-space: nowrap;
   }
 
   .header-actions__text {
